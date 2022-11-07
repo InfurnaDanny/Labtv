@@ -1,0 +1,10 @@
+<section>
+    <h1>Tutti i film acquistati:</h1>  
+    <ul>
+        <li *ngFor="let film of filmAquiredArray">
+            <div>{{film.idFilm}}</div>
+            <div>{{film.title}}</div>
+            <div><button (click)="refundFilm(film.id, $event)">RESTITUISCI</button><i class="fa-solid fa-xmark"></i></div>
+        </li>
+    </ul>
+</section>

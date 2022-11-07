@@ -1,0 +1,10 @@
+<drag-scroll [scrollbar-hidden]="true" id="similar">
+    <!-- <h1>Risultati della ricerca:</h1> -->
+    <div class="films-large"  *ngFor="let singleFilm of movieArray">
+            <img drag-scroll-item [src]=singleFilm.image [alt]=singleFilm.title>
+                <a href="javascript:void(0)" [routerLink]="['/film', singleFilm.id]" class="play-info">
+                    <h3>{{singleFilm.title}}</h3>
+                    <span><b>Rating:</b> {{singleFilm.imDbRating}}</span>
+                </a>
+    </div>
+</drag-scroll>

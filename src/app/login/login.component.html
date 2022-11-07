@@ -1,0 +1,4 @@
+<section>
+    <app-login-user *ngIf="isModaleVisible" (isModaleVisible)="modalVisible($event)"></app-login-user>
+    <app-register *ngIf="!isModaleVisible" (isModaleVisible)="modalVisible($event)"></app-register>
+</section>
